@@ -1,0 +1,18 @@
+QUESTION 2.1 :
+working of Partitioning in brief.
+Hive organizes tables into partitions. It is a way of dividing a table into related parts based on the values of partitioned columns such as date, city, and department. Using partition, it is easy to query a portion of the data.
+Tables or partitions are sub-divided into buckets, to provide extra structure to the data that may be used for more efficient querying. Bucketing works based on the value of hash function of some column of a table.
+	For example consider a table named employee_data contains employee data such as id, name, dept, and yoj (i.e., year of joining). Suppose you need to retrieve the details of all employees who joined in 2012. A query searches the whole table for the required information. However, if you partition the employee data with the year and store it in a separate file, it reduces the query processing time.
+
+QUESTION 2.2 :
+difference between Static and Dynamic Partitioning in Hive with an example.	
+Static Partitioning:
+	Partitioning done with known fields is called as the static partitioning. We statically mention what partition has to be entered in to that partition. Static Partition saves your time in loading data compared to dynamic partition. “Statically” adding a partition in table and move the file into the partition of the table. This takes part of the database and stores into a file. Static partition is in Strict Mode.
+
+Dynamic Partition:
+	Here no specific condition is given. Only the field is mentioned and the partition and the files are formed for each of the distinct entries.
+For Dynamic partition we have to we have to set dynamic partition as non-strict.  
+
+
+
+
